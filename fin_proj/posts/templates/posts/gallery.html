@@ -1,0 +1,131 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>TRAVEL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'posts/css/kstyle.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    
+  </head>
+ <!--font-family: 'Poppins', sans-serif;-->
+  <body>
+<main>
+    <header>
+        
+        <div class="logo">
+            <a href="{%url 'homepage'%}"><img src="{%static 'posts/images/logo_travel.png'%}" alt="logo_travel"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{%url 'about'%}">About Us</a></li>
+                <li><a href="{%url 'gallery'%}">Gallery</a></li>
+                <li><a href="{%url 'prices'%}">Prices</a></li>
+                <li><a href="{%url 'contactus'%}">Contact Us</a></li>
+                <li><a href="{%url 'signup'%}">Sign Up</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container n_container">
+        <div class="soz_gallery">
+            <h3>Gallery</h3>
+            <hr>
+        </div>
+      
+        <div class="box">
+            <div class="dream">
+                <img src="{% static 'posts/images/travel_1.jpeg'%}" alt="">
+                <img src="{%static 'posts/images/travel_2.jpeg'%}" alt="">
+                <img src="{%static 'posts/images/travel_12.jpeg'%}" alt="">
+                <img src="{%static 'posts/images/travel_4.jpeg'%}" alt="">
+                <img src="{%static 'posts/images/travel_5.jpeg'%}" alt="">
+            </div>
+
+            <div class="dream">
+                <img src="{%static 'posts/images/travel_13.jpeg'%}" alt="">
+                <img src="{%static 'posts/images/travel_7.jpeg'%}" alt="">
+                <img src="{%static 'posts/images/travel_8.jpeg'%}" alt="">
+                <img src="{%static 'posts/images/travel_9.jpeg'%}" alt="">
+                <img src="{%static 'posts/images/travel_10.jpeg'%}" alt="">
+            </div>
+
+            <div class="dream">
+                <img src="{%static 'posts/images/travel_11.jpeg'%}" alt="">
+                <img src="{%static 'posts/images/travel_3.jpeg'%}" alt="">
+                <img src="{%static 'posts/images/travel_6.jpeg'%}" alt="">
+                <img src="{%static 'posts/images/travel_14.jpeg'%}" alt="">
+                <img src="{%static 'posts/images/travel_15.jpeg'%}" alt="">
+            </div>
+        </div>
+
+        <div class="button_btn">
+            <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">More</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</main>
+
+<footer class="a-footer">
+
+    <div class="a-about">
+        <div class="a_title">
+            <h3>About us</h3>
+            <hr>
+        </div>
+        <div class="a-flexim"> 
+            <ul class="a-content">
+                <li><p class="a-info">Our unique fee structure combined with our additional efforts and capabilities to preserve unused tickets and get the best possible rates, helping our clients continuously save where it matters most.</p></li>
+            </ul>             
+        </div>
+    </div>
+
+    <div class="a-contact">
+        <div class="a-contact-us">
+            <h3>Contact</h3>
+            <hr>
+        </div>
+
+        <ul class="a-contact-content">
+            <li>
+                <a href="mailto:200103442@stu.sdu.edu.kz?subject=Reaching%20Out&body=How%20are%20you">Email us</a>
+            </li>
+            <li>Mail. 
+                <a href="mailto:200103442@stu.sdu.edu.kz" style="color: rgb(120, 230, 230);">200103157@stu.sdu.edu.kz</a>
+            </li>
+        </ul>
+    </div>
+     
+     <div class="a-more">
+        <div class="a-more-info">
+            <h3>More</h3>
+            <hr>
+        </div>
+        <ul class="a-more-content">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+        </ul>
+     </div>
+
+     <div class="a-help">
+        <div class="a-help-info">
+            <h3>Help</h3>
+            <hr>
+        </div>
+        <ul class="a-help-content">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="{%url 'admin:index'%}">Community Guidelines</a></li>
+            
+        </ul>
+     </div>
+</footer>
+  </body>
+  </html>

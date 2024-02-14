@@ -1,0 +1,125 @@
+{% load poll_extras %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>TRAVEL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static '/posts/css/kstyle.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+ <!--font-family: 'Poppins', sans-serif;animation: circle 60s linear 0s infinite;-->
+  <body>
+<main>
+    <header>
+        
+        <div class="logo">
+            <a href="{%url 'homepage'%}"><img src="{%static 'posts/images/logo_travel.png'%}" alt="logo_travel"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{%url 'about'%}">About Us</a></li>
+                <li><a href="{%url 'gallery'%}">Gallery</a></li>
+                <li><a href="{%url 'prices'%}">Prices</a></li>
+                <li><a href="{%url 'contactus'%}">Contact Us</a></li>
+                <li><a href="{%url 'signup'%}">Sign Up</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="aestroid">
+            <div class="stone"></div>
+            <div class="stone"></div>
+            <div class="stone"></div>
+            <div class="stone"></div>
+            <div class="stone"></div>
+            <div class="stone"></div>
+            <div class="stone"></div>
+            <div class="stone"></div>
+            <div class="stone"></div>
+        </div>
+        <div class="banner-text">
+            <h1>TOURISM IN KAZAKHSTAN</h1>
+            
+            <ul>
+                <li>{% getkalas as kala %}
+                    {% for i in kala%}
+                        <h4>{{i.kala}}</h4>
+                    {%endfor%} </li>
+                
+            </ul>
+           
+        </div>
+        <div class="earth">
+            <div class="earth-img">
+                <img src="{%static 'posts/images/kazakh.png'%}" alt="earth_photo">
+            </div>
+            <div class="circle">
+                {% for i in places%}
+                <div class="icon"><a href={{i.get_absolute_url}}><img src="{{i.image.url}}" alt=""></a></div>
+                
+                {%endfor%} 
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="a-footer">
+
+    <div class="a-about">
+        <div class="a_title">
+            <h3>About us</h3>
+            <hr>
+        </div>
+        <div class="a-flexim"> 
+            <ul class="a-content">
+                <li><p class="a-info">Our unique fee structure combined with our additional efforts and capabilities to preserve unused tickets and get the best possible rates, helping our clients continuously save where it matters most.</p></li>
+            </ul>             
+        </div>
+    </div>
+
+    <div class="a-contact">
+        <div class="a-contact-us">
+            <h3>Contact</h3>
+            <hr>
+        </div>
+
+        <ul class="a-contact-content">
+            <li>
+                <a href="mailto:200103442@stu.sdu.edu.kz?subject=Reaching%20Out&body=How%20are%20you">Email us</a>
+            </li>
+            <li>Mail. 
+                <a href="mailto:200103442@stu.sdu.edu.kz" style="color: rgb(120, 230, 230);">200103442@stu.sdu.edu.kz</a>
+            </li>
+        </ul>
+    </div>
+     
+     <div class="a-more">
+        <div class="a-more-info">
+            <h3>More</h3>
+            <hr>
+        </div>
+        <ul class="a-more-content">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+     </div>
+
+     <div class="a-help">
+        <div class="a-help-info">
+            <h3>Help</h3>
+            <hr>
+        </div>
+        <ul class="a-help-content">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="{%url 'admin:index'%}">Community Guidelines</a></li>
+            
+        </ul>
+     </div>
+</footer>
+</body>
+</html>

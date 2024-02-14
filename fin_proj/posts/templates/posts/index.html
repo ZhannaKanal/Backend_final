@@ -1,0 +1,103 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order</title>
+    <link rel="stylesheet" href="{% static 'posts/css/boot.css' %}">
+</head>
+
+<body>
+    <div class="container">
+   <div class="row">
+        <div class="col-md-12">
+            <a href="{%url 'homepage'%}"><h1>User Order</h1></a>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success">{{ message }}</div>
+                {% endfor %}
+
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-3">
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="number">Number</label>
+                    <input type="number" name="number" class="form-control" id="number" required>
+                </div>
+                <div class="form-group">
+                    <label for="number_people">Adam sany</label>
+                    <label><input type="radio" name="number_people" value="1-2">1-2</label>
+                    <label><input type="radio" name="number_people" value="3-5">3-5</label>
+                    <label><input type="radio" name="number_people" value="5-10">5-10</label>
+                    <label><input type="radio" name="number_people" value="10-15">10-15</label>
+                </div>
+                <div class="form-group">
+                    <label for="oz_kalasy">Oz Kalasy</label>
+                    <label><input type="checkbox" name="oz_kalasy" value="Shym">Shymkent</label>
+                    <label><input type="checkbox" name="oz_kalasy" value="Ala">Almaty</label>
+                    <label><input type="checkbox" name="oz_kalasy" value="As">Astana</label>
+                </div>
+                <div class="form-group">
+                    <label for="demalys_orny">Demalys Orny</label>
+                    <select name="demalys_orny" id="demalys_orny" class="form-control">
+                        <option value="Bur">Burabai</option>
+                        <option value="Shym">ShymBulak</option>
+                        <option value="Kaindy">Kaindy</option>
+                    </select>
+                <div class="form-group">
+                    <button class="btn btn-success">Add record</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-9">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>ID </th>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Adam sany</th>
+                    <th>Oz kalasy</th>
+                    <th>Demalys Orny</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in userData %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.number }}</td>
+                        <td>{{ user.number_people }}</td>
+                        <td>{{ user.oz_kalasy }}</td>
+                        <td>{{ user.demalys_orny }}</td>
+                        <td>
+                            <a href="{% url 'edit' user.id %}">Edit</a>
+                            <a href="{% url 'delete' user.id %}">Delete</a>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,41 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>TRAVEL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'posts/css/kstyle.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+ <!--font-family: 'Poppins', sans-serif;animation: circle 60s linear 0s infinite;-->
+  <body>
+<main>
+    <header>
+        
+        <div class="logo">
+            <a href="{%url 'homepage'%}"><img src="{%static 'posts/images/logo_travel.png'%}" alt="logo_travel"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{%url 'about'%}">About Us</a></li>
+                <li><a href="{%url 'gallery'%}">Gallery</a></li>
+                <li><a href="{%url 'prices'%}">Prices</a></li>
+                <li><a href="{%url 'contactus'%}">Contact Us</a></li>
+                <li><a href="{%url 'signup'%}">Sign Up</a></li>
+            </ul>
+        </div>
+    </header>
+
+{% comment %} <h1>Hello, {{ esim|default:'Guest' }}!</h1>
+          {% endcomment %}
+        {% for post in post %}
+          <h1>Kosh,keldiniz {{post.esim}}</h1>
+          <p>Paidalanushy kabyldandy</p>
+        {% endfor %}
+        
+</body>
+</html>
+<body>

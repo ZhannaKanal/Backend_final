@@ -1,0 +1,75 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order</title>
+    <link rel="stylesheet" href="{% static 'posts/css/boot.css' %}">
+</head>
+<body>
+<div class="container">
+
+</div>
+
+</body>
+</html>
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Update Order</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-8">
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" value="{{ userData.name }}" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="number">Number</label>
+                    <input type="number" name="number"
+                           value="{{ userData.number }}"
+                           class="form-control" id="number" required>
+                </div>
+                <div class="form-group">
+                    <label for="number_people">Adam sany</label>
+                    <label><input type="radio" name="number_people" {% if userData.number_people == '1-2' %} checked {% endif %}
+                                  value="1-2">1-2</label>
+                    <label><input type="radio" name="number_people" {% if userData.number_people == '3-5' %} checked {% endif %}
+                                  value="3-5">3-5</label>
+                    <label><input type="radio" name="number_people" {% if userData.number_people == '5-10' %} checked {% endif %}
+                                    value="5-10">5-10</label>
+                    <label><input type="radio" name="number_people" {% if userData.number_people == '10-15' %} checked {% endif %}
+                                    value="10-15">10-15</label>
+                </div>
+                <div class="form-group">
+                    <label for="oz_kalasy">Oz kalasy</label>
+                    <label><input type="checkbox" name="oz_kalasy" {% if 'Shym' in userData.oz_kalasy %}
+                                  checked {% endif %} value="shym">Shymkent</label>
+                    <label><input type="checkbox" name="oz_kalasy"  {% if 'Ala' in userData.oz_kalasy %}
+                                  checked {% endif %} value="ala">Almaty</label>
+                    <label><input type="checkbox" name="oz_kalasy"  {% if 'As' in userData.oz_kalasy %}
+                                  checked {% endif %} value="as">Astana</label>
+                </div>
+                <div class="form-group">
+                    <label for="demalys_orny">Demalys Orny</label>
+                    <select name="demalys_orny" id="demalys_orny" class="form-control">
+                        <option value="Bur"  {% if userData.demalys_orny == 'Bur' %} selected {% endif %}>Burabai</option>
+                        <option value="Shym" {% if userData.demalys_orny == 'Shym' %} selected {% endif %}>ShymBulak</option>
+                        <option value="Kaindy" {% if userData.demalys_orny == 'Kaindy' %} selected {% endif %}>Kaindy</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success">Update record</button>
+                </div>
+            </form>
+        </div>
+      
+    </div>
+
+{% endblock content %}

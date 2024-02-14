@@ -1,0 +1,154 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ABOUT US</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Caveat">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'posts/css/kstyle.css'%}">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        
+        <div class="logo">
+            <a href="{%url 'homepage'%}"><img src="{%static 'posts/images/logo_travel.png'%}" alt="logo_travel"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{%url 'about'%}">About Us</a></li>
+                <li><a href="{%url 'gallery'%}">Gallery</a></li>
+                <li><a href="{%url 'prices'%}">Prices</a></li>
+                <li><a href="{%url 'contactus'%}">Contact Us</a></li>
+                <li><a href="{%url 'signup'%}">Sign Up</a></li>
+            </ul>
+        </div>
+    </header>
+	<h1 class="a-bout-h1">About Our Company</h1>
+
+	
+	<div class="a-block">
+		<div class="a-bout-citata">
+			<p class="a-citata"><i>"At Colwick, our services start with you. Our main goal is to create a quality experience from take-off, during your staff’s trip, and in preparation for their next trip—so you can focus on what matters most in your business."</i></p>
+			<p style="color: rgba(255, 255, 255, 0.5); font-family: hurme_no2-webfont,-apple-system,BlinkMacSystemFont,sans-serif; margin-top: 5px;">- Director Me
+			</p>
+		</div>
+		<div class="a-image" >
+	   		<img src="{% static 'posts/images/—Pngtree—comercial air plane_3711718.png'%}">
+		</div>
+	</div>
+	
+	<div class="a-arasy"></div>
+	<div class="a-ortasy-back">
+	<div class="a-ortasy">
+		<div class="a-ortasy-zhazu"><h2>Our Service Starts With You</h2></div>
+		<div class="a-square">
+			<div class="d-flex ">
+		            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+		                <ol class="carousel-indicators">
+		                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+		                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+		                </ol>
+		                <div class="carousel-inner">
+		                    <div class="carousel-item active">
+		                        <div class="d-block w-100">
+		                        	<div class="a-levi">
+										<h4>Travel services</h4>
+                                        {%for i in service%}
+										<ul>
+											<li>{{i.service}}</li>
+										</ul>
+                                        {%endfor%}
+									</div>
+
+		                        </div>
+		                    </div>
+		                    <div class="carousel-item">
+		                        <div class="a-pravi">
+									<h4>Complimentary</h4>
+                                    {%for i in second%}
+									<ul>
+										<li>{{i.second}}</li>
+									</ul>
+                                    {%endfor%}
+		                    	</div>
+		                	</div>
+		                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+		                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		                    <span class="visually-hidden">Previous</span>
+		                </a>
+		                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+		                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		                    <span class="visually-hidden">Next</span>
+		                </a>
+		            </div>
+		        </div>
+
+			</div>
+		</div></div>
+	</div>
+
+	
+	<footer class="a-footer">
+
+    <div class="a-about">
+        <div class="a_title">
+            <h3>About us</h3>
+            <hr>
+        </div>
+        <div class="a-flexim"> 
+            <ul class="a-content">
+                <li><p class="a-info">Our unique fee structure combined with our additional efforts and capabilities to preserve unused tickets and get the best possible rates, helping our clients continuously save where it matters most.</p></li>
+            </ul>             
+        </div>
+    </div>
+
+    <div class="a-contact">
+        <div class="a-contact-us">
+            <h3>Contact</h3>
+            <hr>
+        </div>
+
+        <ul class="a-contact-content">
+            <li>
+                <a href="mailto:200103442@stu.sdu.edu.kz?subject=Reaching%20Out&body=How%20are%20you">Email us</a>
+            </li>
+            <li>Mail. 
+                <a href="mailto:200103442@stu.sdu.edu.kz" style="color: rgb(120, 230, 230);">200103442@stu.sdu.edu.kz</a>
+            </li>
+        </ul>
+    </div>
+     
+     <div class="a-more">
+        <div class="a-more-info">
+            <h3>More</h3>
+            <hr>
+        </div>
+        <ul class="a-more-content">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+     </div>
+
+     <div class="a-help">
+        <div class="a-help-info">
+            <h3>Help</h3>
+            <hr>
+        </div>
+        <ul class="a-help-content">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="{%url 'admin:index'%}">Community Guidelines</a></li>
+            
+        </ul>
+     </div>
+</footer>
+</body>
+</html>

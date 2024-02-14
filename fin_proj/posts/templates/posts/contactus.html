@@ -1,0 +1,119 @@
+ {%load static%}
+   <!doctype html>
+   <html lang="en">
+     <head>
+       <title>TRAVEL</title>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="{% static 'posts/css/kstyle.css'%}">
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+     </head>
+    <!--font-family: 'Poppins', sans-serif;animation: circle 60s linear 0s infinite;-->
+     <body>
+   <main>
+       <header>
+           
+           <div class="logo">
+               <a href="{%url 'homepage'%}"><img src="{%static 'posts/images/logo_travel.png'%}" alt="logo_travel"></a>
+           </div>
+           <div class="menu">
+               <ul>
+                   <li><a href="{%url 'about'%}">About Us</a></li>
+                   <li><a href="{%url 'gallery'%}">Gallery</a></li>
+                   <li><a href="{%url 'prices'%}">Prices</a></li>
+                   <li><a href="{%url 'contactus'%}">Contact Us</a></li>
+                   <li><a href="{%url 'signup'%}">Sign Up</a></li>
+               </ul>
+           </div>
+       </header>
+   
+    <div class="a-contactus">
+        <h1 class="a-contactus-h1">Contact Us</h1>
+        <p>Have questions? The quickest way to get in touch with us is using the form below.</p>
+    </div>
+
+    <div class="a-forma">
+        <div class="a-sol">
+            <h1>Start your journey with US</h1>
+
+            <p>Our travel experts consistently exceed the expectations of the modern-day corporate traveler. Get in touch with us to start your journey with Colwick Travel today.</p>
+
+            <h3>7856 565 8802 or 8766 544 0407 (Toll Free)</h3>
+
+            <h3>info@gmail.com</h3>
+
+            <h3>Qaskelen', Abylaihan 1/1, SDU, 04568</h3>
+        </div>
+
+
+        <div class="a-on">
+            <div>
+                <h3>If you want to  travel with us, click button || </h3>
+                <a href="{%url 'index'%}">
+                <button class="a-button" type="submit">Click!!!</button></a>
+
+            </div>
+
+        </div>
+
+    </div>
+    <footer class="a-footer">
+
+    <div class="a-about">
+        <div class="a_title">
+            <h3>About us</h3>
+            <hr>
+        </div>
+        <div class="a-flexim"> 
+            <ul class="a-content">
+                <li><p class="a-info">Our unique fee structure combined with our additional efforts and capabilities to preserve unused tickets and get the best possible rates, helping our clients continuously save where it matters most.</p></li>
+            </ul>             
+        </div>
+    </div>
+
+    <div class="a-contact">
+        <div class="a-contact-us">
+            <h3>Contact</h3>
+            <hr>
+        </div>
+
+        <ul class="a-contact-content">
+            <li>
+                <a href="mailto:200103442@stu.sdu.edu.kz?subject=Reaching%20Out&body=How%20are%20you">Email us</a>
+            </li>
+            <li>Mail. 
+                <a href="mailto:200103442@stu.sdu.edu.kz" style="color: rgb(120, 230, 230);">200103442@stu.sdu.edu.kz</a>
+            </li>
+        </ul>
+    </div>
+     
+     <div class="a-more">
+        <div class="a-more-info">
+            <h3>More</h3>
+            <hr>
+        </div>
+        <ul class="a-more-content">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+     </div>
+
+     <div class="a-help">
+        <div class="a-help-info">
+            <h3>Help</h3>
+            <hr>
+        </div>
+        <ul class="a-help-content">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Community Guidelines</a></li>
+            
+        </ul>
+     </div>
+</footer>
+</body>
+</html>
